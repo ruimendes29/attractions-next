@@ -1,0 +1,15 @@
+.home {
+  align-self: center;
+}
+
+.btn{
+    margin-left: 1rem;
+    width: min(600px,50%)!important;
+}
+
+.home>h1{
+    font-size:min(10em,10vw);
+    color:blue;
+}
+
+

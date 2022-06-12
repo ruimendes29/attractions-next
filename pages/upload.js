@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Home from "../components/Home/Home";
+import UploadForm from "../components/Upload/UploadForm";
+import vercelLogo from "../public/vercel.svg";
 
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
@@ -8,7 +9,7 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-const Homepage = () => {
+const Homepage = (props) => {
   useEffect(() => {
     const previousCookie = document.cookie;
     if(previousCookie)
@@ -18,7 +19,17 @@ const Homepage = () => {
     }
     console.log(previousCookie); 
   }, []);
-  return <Home/>;
+  return <UploadForm ratio={props.ratio}/>;
 };
+
+export function getStaticProps(){
+  console.log(vercelLogo.width);
+  return {
+    props:{
+      ratio:vercelLogo.width/vercelLogo.height
+    }
+  }
+
+}
 
 export default Homepage;

@@ -1,0 +1,78 @@
+.btn {
+  background-color: white;
+  border: 1px solid var(--primary-font-color, red);
+  color: var(--primary-font-color, red);
+  font-size: 1.5rem;
+  width: 100%;
+  min-width: fit-content;
+  border-radius: 0.4rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  transition: filter 0.2s ease-in-out;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after{
+  background-color: var(--primary-font-color, red);
+  filter:invert(100%);
+  content: "";
+  width: 0%;
+  mix-blend-mode:difference;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn::before {
+
+  background-color: var(--primary-font-color, red);
+  filter:invert(100%);
+  content: "";
+  width: 0%;
+  mix-blend-mode:difference;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.5s;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn.primary {
+  background-color: var(--primary-font-color,red);
+  color: white;
+}
+
+.btn.primary::before{
+  background-color: var(--primary-font-color,red);
+}
+
+.secondary {
+  background-color: white;
+  color: var(--primary-color);
+  outline-offset: -2px;
+  outline: 2px solid var(--primary-color);
+}
+
+.disabled {
+  background-color: lightgray;
+  outline-offset: -2px;
+  outline: 2px solid rgb(60, 60, 60);
+  color: rgb(60, 60, 60);
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 40em) {
+  .btn {
+    font-size: 1.2rem !important;
+  }
+}
