@@ -5,6 +5,13 @@
   font-weight: 600;
   color: var(--primary-color,black);
   justify-content: space-between;
+  position: relative;
+  .icon{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 0%;
+  }
 }
 
 .input > input {

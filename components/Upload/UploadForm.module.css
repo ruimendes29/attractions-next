@@ -34,9 +34,9 @@
 }
 
 .form-holder {
-  align-self: center;
   justify-self: center;
   max-height: 70vh;
+  margin-top: calc(var(--nav-height) + 3rem) ;
   display: flex;
   width: 100vw;
   align-items: center;

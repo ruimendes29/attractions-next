@@ -21,7 +21,6 @@ const Navbar = () => {
         </li>
         <li className={`${classes.tabs}`}>
           <Link href={"/search"}>Search</Link>
-          <Link href={"/liked"}>Liked</Link>
           <Link href={"/upload"}>Upload</Link>
         </li>
       </ul>

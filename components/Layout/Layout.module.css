@@ -1,9 +1,9 @@
 .page {
-  width: 100vw;
-  height: calc(100vh - var(--nav-height));
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   position: relative;
-  min-height: fit-content;
+  overflow-x: hidden;
 }
 
 .page.show-shape::after {

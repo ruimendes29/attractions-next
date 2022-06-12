@@ -5,7 +5,6 @@ import classes from "./Layout.module.css";
 const Layout = (props) => {
   return (
     <Fragment>
-      <div className={`${classes.teste}`}></div>
       <Navbar />
       <div
         className={`${classes.page} ${

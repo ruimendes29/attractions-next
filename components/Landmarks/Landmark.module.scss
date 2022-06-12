@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.landmark {
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--primary-color, lightblue);
+  border-radius: 0.5rem;
+  width: 100%;
+    .img-wrapper {
+      height: min(20vh,300px);
+      margin:0 auto;
+      display: flex;
+      justify-content: center;
+    } 
+  h1 {
+    word-break: normal;
+    font-size: min(5rem, 2.5vw);
+  }
+  h3 {
+    word-break: break-all;
+    font-size: min(2.5rem, 1.5vw);
+  }
+  &:hover{
+    filter: brightness(90%);
+  }
+  &.active{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 1rem;
+    justify-self: center;
+    .img-wrapper {height: 60vmin;
+      } 
+  }
+}
+
+@media screen and (max-width: $first-break-point) {
+  .landmark {
+    h1 {
+      font-size: min(5rem, 3.5vw);
+    }
+    h3 {
+      font-size: min(5rem, 2.5vw);
+    }
+  }
+}

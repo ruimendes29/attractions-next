@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useInput from "../../hooks/use-input";
 import classes from "./UploadForm.module.css";
 import Input from "../UI/Input/Input";
-import vercelLogo from "../../public/vercel.svg";
+import noImage from "../../public/noimage.png";
 import Button from "../UI/Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
@@ -32,7 +32,7 @@ const UploadForm = (props) => {
     canvas.width = img.width;
     canvas.height = img.height;
     // Draw the image
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img, 0, 0,canvas.width,canvas.height);
     return canvas.toDataURL("image/jpeg");
   };
 
@@ -91,7 +91,7 @@ const UploadForm = (props) => {
             height={400}
             id="image"
             src={
-              uploadedImage ? URL.createObjectURL(uploadedImage) : vercelLogo
+              uploadedImage ? URL.createObjectURL(uploadedImage) : noImage
             }
             alt="uploaded"
           />
